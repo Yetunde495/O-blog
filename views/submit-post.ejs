@@ -1,0 +1,91 @@
+<div class="col-8">
+  <% if(infoSubmit != '') { %>
+    <div class="col-8 alert alert-success" role="alert">
+      <%= infoSubmit %>
+    </div>
+  <% } %>
+
+  <% if(infoErrors != '') { %>
+    <div class="col-8 alert alert-danger" role="alert">
+      <%= infoErrors[0].message %>
+    </div>
+  <% } %>
+
+    <form action="/submit-post" enctype="multipart/form-data" method="POST">
+
+      <div class="row g-3">
+
+
+
+        <div class="col-12">
+          <label for="title" class="form-label">Post Title</label>
+          <input type="text" name="title" id="title" class="form-control" required>
+        </div>
+
+        <div class="col-12">
+          <label for="content" class="form-label">Post First Content</label>
+          <textarea name="content" id="content" class="form-control" cols="30" rows="4"></textarea>
+        </div>
+
+        <div class="col-12">
+          <label for="description" class="form-label">Post Description</label>
+          <textarea name="description" id="description" class="form-control" cols="30" rows="4"></textarea>
+        </div>
+
+
+
+       <div class="col-12">
+          <label for="categories">Select Category</label>
+          <select class="form-select form-control" name="categories" aria-label="Category">
+            <option selected>Select Category</option>
+            <option value="Food Reviews">Food Reviews</option>
+            <option value="Snack Relief">Snack Relief</option>
+            <option value="Recipes">Recipes</option>
+            <option value="Drinks">Drinks</option>
+
+          </select>
+        </div>
+
+        <div class="col-12">
+          <label for="image">Post Image</label>
+          <input type="file" class="form-control" name="image" accept="image/*">
+        </div>
+
+        <div class="col-12">
+          <label for="secondcontent" class="form-label">Post another Content</label>
+          <textarea name="secondcontent" id="secondcontent" class="form-control" cols="30" rows="4"></textarea>
+        </div>
+
+        <div class="col-12">
+          <label for="secondimage"> Post Second Image </label>
+          <input type="file" name="secondimage" class="form-control" accept="image/*">
+        </div>
+
+
+
+        <div class="col-12">
+          <label for="thirdimage"> Post Third Image </label>
+          <input type="file" name="thirdimage" class="form-control" accept="image/*">
+        </div>
+
+        <div class="col-12">
+          <label for="last-content" class="form-label">Post complete Content</label>
+          <textarea name="lastcontent" id="lastcontent" class="form-control" cols="30" rows="4"></textarea>
+        </div>
+
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Publish</button>
+        </div>
+
+        <div class="col-12">
+          <label for="postDate">Enter The current Date</label>
+          <input type="text" name="postDate" id="postDate" value="">
+        </div>
+
+      </div>
+
+    </form>
+
+  </div>
+</div>

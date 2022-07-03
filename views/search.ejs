@@ -1,0 +1,58 @@
+<section class="searchpage-section">
+
+
+<div class="">
+  <h1>Search Results </h1>
+</div>
+
+<div class="row">
+
+<div class="col-8">
+  <div class="">
+    <% if(post != '') { %>
+      <% post.forEach(function(post, index){ %>
+      <a href="/post/<%= post._id %>" class="recipe-anchor" >
+        <div class="recipe-img-div">
+          <img src="/uploads/<%= post.image %>" alt="<%= post.title %>" loading="lazy" class="recipe-img" >
+          <div class="category-tag"><%= post.categories %> </div>
+        </div>
+
+        <div class="recipe-text">
+          <h5><%= post.title %></h5>
+          <p><%= post.description %></p>
+        <p>View Post<span><i class="fas fa-arrow-right"></i></span></p>
+
+        </div>
+
+
+      </a>
+      <% }) %>
+    <% } else { %>
+      <p>No items found.</p>
+    <% } %>
+  </div>
+
+</div>
+
+<div class="col-4">
+  <div class="blog-aboutdiv ">
+    <img src="/img/DSC_2844 (2).JPG" alt="" class="about-img">
+    <h3 class="about-header">Hi! I'm Yetunde Olounjeiya</h3>
+    <p class="about-tag">an unapologetic foodie</p>
+    <p class="about-paragraph">I love to explore, and document exciting fun reviews of Nigerian dishes/meals.
+       </p>
+    <button class=" abt-button" type="button" name="button" onclick="location.href='/about'">READ MORE</button>
+  </div>
+  <div class="">
+    <h3>Subscribe to our Newsletter</h3>
+    <label for="newsletter1" class="visually-hidden">Your Name</label>
+    <input id="newsletter1" type="text" name="fName" class="form-control" placeholder="Your Name">
+    <label for="newsletter1" class="visually-hidden">Email address</label>
+    <input id="newsletter1" type="text" name="email" class="form-control" placeholder="Your Email Address">
+    <button class="w-100 btn btn-dark" type="submit">Sign Me Up!</button>
+  </div>
+</div>
+
+</div>
+
+</section>

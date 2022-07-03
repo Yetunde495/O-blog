@@ -1,0 +1,60 @@
+<% if(post != null ) { %>
+
+
+
+
+  <div class="row post-div">
+    <div class="row">
+      <div class="col-8">
+
+      <h1><%- post.title %></h1>
+      <p><%- post.description %> </p>
+      <img src="/uploads/<%- post.image %>"  alt="<%- post.title %>" loading="lazy" class="postimage">
+      <p class="first-content"><%- post.content %></p>
+      <img src="/uploads/<%- post.secondImage %>" alt="<%- post.title %>" loading="lazy" class="postimage">
+      <p class="first-content"><%- post.secondContent %></p>
+      <img src="/uploads/<%- post.thirdImage %>" alt="<%- post.title %>" loading="lazy" class="postimage">
+      <p class="first-content"><%- post.thirdContent %></p>
+      <img src="/uploads/<%- post.image %>"  alt="<%- post.title %>" loading="lazy" class="postimage">
+      <p>This is a home of delicacies, and your mouth is the key.</p>
+      <p>I am Yetunde, Olounjeiya😋</p>
+    </div>
+
+
+
+      <div class="col-4 ba-div">
+        <div class="blog-aboutdiv ">
+          <img src="/img/DSC_2844 (2).JPG" alt="" class="about-img">
+          <h3 class="about-header">Hi! I'm Yetunde Olounjeiya</h3>
+          <p class="about-tag">an unapologetic foodie</p>
+          <p class="about-paragraph">I love to explore, and document exciting fun reviews of Nigerian dishes/meals.
+             </p>
+          <button class=" abt-button" type="button" name="button" onclick="location.href='/about'">READ MORE</button>
+        </div>
+
+        <div class="">
+          <h3>Subscribe to our Newsletter</h3>
+          <label for="newsletter1" class="visually-hidden">Your Name</label>
+          <input id="newsletter1" type="text" name="fName" class="form-control" placeholder="Your Name">
+          <label for="newsletter1" class="visually-hidden">Email address</label>
+          <input id="newsletter1" type="text" name="email" class="form-control" placeholder="Your Email Address">
+          <button class="w-100 btn btn-dark" type="submit">Sign Me Up!</button>
+        </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+    </div>
+
+<% } else { %>
+  <p>No item found.</p>
+<% } %>

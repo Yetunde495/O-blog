@@ -1,0 +1,394 @@
+           <!--Mobile-Carousel-->
+
+<section id="main" class="main-section">
+  <div class="featured-post">
+    <h2 class="featured-text">Featured Posts</h2>
+  </div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://i0.wp.com/diahcuisineonline.co.uk/wp-content/uploads/2021/02/Yellow-eba.jpg?resize=450%2C450&ssl=1" class="d-block w-100" alt="">
+      </div>
+      <div class="carousel-item">
+        <img src="https://ingmar.app/blog/wp-content/uploads/2015/05/Nigeria-Jollof-rice.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://diahcuisineonline.co.uk/wp-content/uploads/2021/02/Ewa-agoyin.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+                <!--Desktop-Carousel-->
+   <div id="ls-size-carousel" class="container viewport">
+     <div class="row ">
+<div class="col-4">
+ <img src="https://i0.wp.com/diahcuisineonline.co.uk/wp-content/uploads/2021/02/Yellow-eba.jpg?resize=450%2C450&ssl=1" style="width:100%">
+ <h4> <%= latest.categories %> </h4>
+ <h3>Eba and Egusi Soup</h3>
+</div>
+<div class="col-4">
+ <img src="https://ingmar.app/blog/wp-content/uploads/2015/05/Nigeria-Jollof-rice.jpg" style="width:100%">
+ <h3>Jollof Rice with Plantain, and Chicken</h3>
+</div>
+<div class="col-4">
+  <% if(beans != '') { %>
+    <% beans.forEach(function(post, index){ %>
+      <a href="/post/<%= post._id %>" class="">
+ <img src="/uploads/<%= post.image %>" alt="<%= post.title %>" loading="lazy" style="width:100%" >
+ <h3><%= post.title %></h3>
+ <div class="category-tag"> <%= post.categories %> </div></a>
+
+ <% }) %>
+<% } else { %>
+ <p>No items found.</p>
+<% } %>
+</div>
+</div>
+   </div>
+
+</section>
+
+             <!--Search Section-->
+  <section class="Search">
+    <div class="row search">
+      <!--<div class="col-md-12">
+        <div class="d-flex w-100 gap-5">-->
+          <div id="Search-id" class="col-md-6 search-div">
+          <input class="search-box" type="text" name="" value="" placeholder="Browse Through our Categories">
+          </div>
+          <div id="Icon-id" class="col-md-6 icon-div">
+           <div class="d-flex w-100 gap-2 ">
+
+
+
+           <div id="first-icon" class="icons" >
+             <a class="icon-link" href="#"><img src="/img/dish.svg" alt="" class="s-icons" style="width: 35px; height: 35px;">
+             <p class="icon-paragraph">Food Review</p></a>
+           </div>
+           <div class="icons">
+          <a class="icon-link" href="#"><img src="/img/french-fries.svg" alt="" class="s-icons" style="width: 30px;">
+            <p class="icon-paragraph">Snack Relief</p></a>
+           </div>
+           <div class="icons">
+             <a class="icon-link" href="#"><img src="/img/shaker.svg" alt="" class="s-icons" style="width: 35px;">
+             <p class="icon-paragraph">Local Drinks</p></a>
+           </div>
+           <div class="icons">
+             <a class="icon-link" href="#"><img src="/img/recipe-book.svg" alt="" class="s-icons" style="width: 30px; height: 35px;">
+             <p class="icon-paragraph">Local Recipes</p></a>
+           </div>
+           <div class="icons">
+             <a class="icon-link" href="#"><img src="/img/book-literature.svg" alt="" class="s-icons" style="width: 30px;">
+           <p class="icon-paragraph" style="width: 120px;">Foodie Chronicle</p></a>
+           </div>
+
+      </div>
+          </div>
+        </div>
+    <!--  </div>
+
+    </div>-->
+
+   </section>
+
+                                   <!--About-Section-->
+
+                                  <!--desktopAbout-div-->
+<!--<section id="About" class="about-section">
+<div id="ls-size" class="about-container">
+<div class="row about-row">
+   <div class="col-4 about-text">
+     <h3 class="about-header">Hi! I'm Yetunde Olounjeiya</h3>
+     <p class="about-tag">an unapologetic foodie</p>
+     <p class="about-paragraph"> I love to eat and explore exciting indigenous Nigerian dishes/meals.
+I also love to write and document personal fun reviews of native meals; bringing the nostalgia of your favorite foods to your screens. </p>
+     <button class=" abt-button" type="button" name="button" onclick="location.href='/about'">READ MORE</button>
+  </div>
+  <div class="col-4">
+    <img src="/img/DSC_2844 (2).JPG" alt="" style="width:100%" class="about-desktop-image">
+  </div>
+  <div class="col-4 about-text">
+    <h3 class="about-header">On the other Side</h3>
+    <p class="about-tag">I'm a freelance writer and Web developer</p>
+    <p class="about-paragraph">Yes, you guessed right; this website was developed by yours truly.
+On days you don’t find me in the ice-cream store or local canteens, I’m probably hunched over my laptop, writing and debugging codes.</p>
+    <button class=" abt-button" type="button" name="button" onclick="location.href='/about'">READ MORE</button>
+  </div>
+</div>
+</div>
+                                  <!--mobileAbout-Div-->
+
+<div id="mobile-about"          class="about-mobile">
+  <img src="/img/DSC_2844 (2).JPG" alt="" class="about-img">
+  <div class="about-text">
+    <h3 class="about-header">Hi! I'm Yetunde Olounjeiya</h3>
+    <p class="about-tag">an unapologetic foodie</p>
+    <p class="about-paragraph">I love to eat and explore exciting Nigerian dishes/meals.
+      I also love to write and document personal fun reviews of native meals; bringing the nostalgia of your favorite foods to your screens. </p>
+    <button class=" abt-button" type="button" name="button" onclick="location.href='/about'">READ MORE</button>
+  </div>
+
+</div>
+<!--</section>-->
+
+
+
+
+
+<section id="categories" class="category">
+<div class="categories">
+
+
+  <div class="latest-text-div">
+    <h2>Latest and Greatest</h2>
+    <a href="/explore-latest" class="ms-auto">View More</a>
+  </div>
+
+<div class="row">
+<div id="desktop-latest-div" class="col-md-8 latest-review-div">
+
+    <% if(latest != '') { %>
+      <% latest.forEach(function(post, index){ %>
+
+<!--https://diahcuisineonline.co.uk/wp-content/uploads/2021/02/Ewa-agoyin.jpg-->
+      <div class="latest-image-div d-flex gap-2">
+
+          <div class="">
+            <a href="/post/<%= post._id %>" class="">
+            <img src="/uploads/<%= post.image %>" alt="<%= post.title %>" loading="lazy" class="latest-img">
+            <div class="category-tag"> <%= post.categories %> </div> </a>
+          </div>
+
+
+           <div class="post">
+             <p class="post-date"><%= post.date %> </p>
+             <h3 class="post-title"><%= post.title %></h3>
+             <p><%= post.description %></p>
+
+             <a href="/post/<%= post._id %>">Continue Reading</a>
+           </div>
+
+
+
+      </div>
+
+<hr>
+
+
+
+      <% }) %>
+    <% } else { %>
+      <p>No items found.</p>
+    <% } %>
+
+  </div>
+
+
+
+  <!--<div id="mobile-latest-div" class="col-lg-12">
+    <% if(latest != '') { %>
+      <% latest.forEach(function(post, index) { %>
+        <a href="/post/<%= post._id %>" class="recipe-anchor">
+          <div class="mobile-recipe-img-div">
+            <img src="/uploads/<%= post.image %>" alt="<%= post.title %>" loading="lazy" class="mobile-recipe-img" >
+            <div class="category-tag"><%= post.categories %> </div>
+          </div>
+
+          <div class="mobile-recipetext-div">
+            <h5><%= post.title %></h5>
+            <p><%= post.description %></p>
+          <p>View Post<span><i class="fas fa-arrow-right"></i></span></p>
+
+          </div>
+        </a>
+
+        <% }) %>
+      <% } else { %>
+        <p>No items found.</p>
+      <% } %>
+  </div> -->
+
+
+  <div class="col-md-4 ">
+<h3 class="category-text">Explore the dash of our Delightful menu😉</h3>
+
+<div class="menu-div">
+<img src="/img/cartoon_chef_3.png" alt="" class="menu-img">
+
+  <ul class="menu-ul">
+    <li><div class="menu-list-item"><a class="icon-link" href="#"><img src="/img/dish.svg" alt="" class="menu-icons" >
+    <p class="menu-paragraph">Food Review </p></a>
+    </div></li>
+    <li><div class="menu-list-item"><a class="icon-link" href="#"><img src="/img/french-fries.svg" alt="" class="menu-icons" >
+    <p class="menu-paragraph">Snack Relief </p></a>
+    </div></li>
+    <li><div class="menu-list-item"><a class="icon-link" href="#"><img src="/img/shaker.svg" alt="" class="menu-icons" >
+    <p class="menu-paragraph">Everything Drinks </p></a>
+    </div></li>
+    <li><div class="menu-list-item"><a class="icon-link" href="#"><img src="/img/recipe-book.svg" alt="" class="menu-icons" >
+    <p class="menu-paragraph">Local Recipes </p></a>
+    </div></li>
+    <li><div class="menu-list-item"><a class="icon-link" href="#"><img src="/img/book-literature.svg" alt="" class="menu-icons" >
+    <p class="menu-paragraph">Foodie Chronicles </p></a>
+    </div></li>
+  </ul>
+</div>
+
+
+
+       </div>
+
+  </div>
+
+
+</div>
+<form action="/" method="POST" class="newsletter">
+  <div class="row">
+    <div class="col-md-6">
+      <h5>Subscribe to our newsletter</h5>
+      <p>Heyy! What if I told you I can send you a monthly digest of what’s new and exciting from us,
+        at zero cost, and you don’t even have to worry about delivery fee!</p>
+    </div>
+
+    <div class="col-md-6">
+      <div class="d-flex w-100 gap-2 newsletter-inputs">
+        <label for="newsletter1" class="visually-hidden">Your Name</label>
+        <input id="newsletter1" type="text" name="fName" class="form-control" placeholder="Your Name">
+        <label for="newsletter1" class="visually-hidden">Email address</label>
+        <input id="newsletter1" type="text" name="email" class="form-control" placeholder="Your Email Address">
+        <button class="w-100 btn btn-dark" type="submit">Sign Me Up!</button>
+      </div>
+    </div>
+  </div>
+
+
+</form>
+</section>
+
+
+<section class="Recipe-Section">
+
+  <div class=" latest-text-div">
+    <h3>Local Recipes</h3>
+    <a href="/explore-latest" class="ms-auto">View More</a>
+  </div>
+
+  <div class="container">
+    <div class=" "> <!--row-->
+      <div class=""> <!--col-xs-12 col-sm-6 col-md-6 col-lg-12-->
+        <div class="recipe-div d-flex gap-4">
+            <% if(typeof food.recipe !== 'undefined' && food.recipe.length > 0) { %>
+                <% food.recipe.forEach(function(post, index){ %>
+                <a href="/post/<%= post._id %>" class="recipe-anchor">
+                  <div class="recipe-img-div">
+                    <img src="/uploads/<%= post.image %>" alt="<%= post.title %>" loading="lazy" class="recipe-img">
+                    <div class="category-tag"><%= post.categories %>  </div>
+                  </div>
+                  <div class= "recipe-text">
+                    <h5><%= post.title %></h5>
+                    <p><%= post.description %></p>
+                  <p>View Post<span><i class="fas fa-arrow-right"></i></span></p>
+
+                  </div>
+                </a>
+                <% }) %>
+              <% } else { %>
+                <p>No items found.</p>
+              <% } %>
+          </div>
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+</section>
+
+<section class="chronicle-section">
+  <div class="row">
+    <div class="col-lg-6 Email">
+     <h2>Share your Foodie Stories with Thousands of readers all over the World</h2>
+    <button class=" btn notify-btn btn-lg type="submit" ">Share Story</button>
+    </div>
+
+    <div class="col-lg-6 carousel slide carousel-fade cta" data-bs-ride="carousel">
+    <div class="carousel-inner carousel-item active" data-bs-interval="5000">
+    <h2 class="carousel-header">Read through Fun Foodie Stories of dash dash </h2></div>
+    <div class="carousel-item">
+    <h3 class="carousel-text">Share your Funny food stories with the world</h3>
+    </div>
+    </div>
+
+
+
+</section>
+
+
+
+
+<section class="Snack-Section">
+  <div class=" latest-text-div">
+    <h3>More From The Blog</h3>
+    <a href="/explore-latest" class="ms-auto">View More</a>
+  </div>
+
+  <div class="snack-container">
+   <% if(typeof food.snacks !== "undefined" && food.snacks.length > 0) { %>
+     <% food.snacks.forEach(function(post, index){ %>
+
+
+
+          <div class="card-img"><a href="#"><img src="/uploads/<%= post.image %>" class="card-img" alt="<%= post.title %>" loading="lazy">
+             <div class="category-tag"><%= post.categories %> </div>
+             </a>
+        </div>
+
+
+
+
+
+
+
+       <div class="card-content">
+         <a href="#">
+
+        <h5 class="card-title"><%= post.title %></h5>
+        <p><%= post.description %></p></a>
+
+       <a href="#" class="">Read More<span><i class="fas fa-arrow-right"></i></span></a>
+       </div>
+       </div>
+
+
+           <% }) %>
+         <% } else { %>
+           <p>No items found.</p>
+         <% } %>
+
+
+       </div>
+  </div>
+</section>
